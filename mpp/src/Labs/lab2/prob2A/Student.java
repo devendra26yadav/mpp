@@ -10,6 +10,7 @@ class Student {
     }
 
     public GradeReport getGradeReport() {
+
         return gradeReport;
     }
 
