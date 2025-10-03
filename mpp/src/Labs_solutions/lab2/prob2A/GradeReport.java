@@ -1,4 +1,4 @@
-package Labs.lab2.prob2A;
+package Labs_solutions.lab2.prob2A;
 
 class GradeReport {
     private Student student;

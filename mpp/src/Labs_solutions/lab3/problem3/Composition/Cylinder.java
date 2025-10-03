@@ -1,4 +1,4 @@
-package Labs.lab3.problem3.Composition;
+package Labs_solutions.lab3.problem3.Composition;
 
 public class Cylinder {
     private double height;

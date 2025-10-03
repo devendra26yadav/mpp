@@ -1,4 +1,4 @@
-package Labs.lab3.problem4;
+package Labs_solutions.lab3.problem4;
 
 public class Driver {
     public static void main(String[] args) {

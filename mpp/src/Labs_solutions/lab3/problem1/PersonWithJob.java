@@ -1,4 +1,4 @@
-package Labs.lab3.problem1;
+package Labs_solutions.lab3.problem1;
 
 public class PersonWithJob{
 

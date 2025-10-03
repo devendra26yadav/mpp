@@ -1,6 +1,4 @@
-package Labs.lab3.problem1;
-
-import java.util.Objects;
+package Labs_solutions.lab3.problem1;
 
 public class Person {
     private String name;

@@ -1,4 +1,4 @@
-package Labs.lab3.problem2;
+package Labs_solutions.lab3.problem2;
 
 public class Apartment {
     private String apartmentName;

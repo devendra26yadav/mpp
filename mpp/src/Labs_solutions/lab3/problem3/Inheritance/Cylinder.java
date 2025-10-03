@@ -1,4 +1,4 @@
-package Labs.lab3.problem3.Inheritance;
+package Labs_solutions.lab3.problem3.Inheritance;
 
 public class Cylinder {
     private double height;
