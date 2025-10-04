@@ -1,0 +1,10 @@
+Meaning of this is :
+"Know that by which all this is known" means understanding the source or system
+that makes knowledge possible — not just knowing things, but understanding how we know them.
+
+Relation to Software Engineering:
+
+It does relate. Writing code is only one aspect of software engineering;
+we also need to comprehend the concepts, resources, and abstractions that underlie it,
+such as design patterns and architecture. This indicates a higher degree of comprehension,
+such as being aware of the system that supports all other systems.

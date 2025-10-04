@@ -1,0 +1,7 @@
+
+@Override
+public double calcFee() {
+    int days = dateDifference();
+    int months = (int) Math.ceil(days / 30.0);
+    return months * monthlyRate;
+}
