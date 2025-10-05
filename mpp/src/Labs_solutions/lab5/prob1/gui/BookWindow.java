@@ -123,7 +123,7 @@ public class BookWindow extends JFrame {
 //            JOptionPane.showMessageDialog(BookWindow.this, "Still need to check book rules!");
 //        }
 
-        // added here
+        // added by me
         public void actionPerformed(ActionEvent evt){
             try {
                 RuleSet rules = RuleSetFactory.getRuleSet(BookWindow.this);
