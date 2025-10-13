@@ -1,0 +1,10 @@
+inside method: public static List<Employee> removeDuplicates(List<Employee> employees)
+for finding employee as key in HashMp using only equals  overridden method which gives incorrect comparison between keys
+in the map , to make it correct hashCode method must be overridden correctly.
+
+Here is the way to do this correctly
+
+ @Override
+    public int hashCode(){
+        return Objects.hash(name,salary);
+    }

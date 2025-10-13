@@ -1,0 +1,9 @@
+The equals method is not overridden, but it is just overloaded methods which will not be called when we expected
+equals(Object) so to make it working correctly we write code as
+
+  @Override
+    public boolean equals(Object o){
+        if(o==null) return false;
+        if(!( o instanceof Employee e)) return false;
+        return name.equals(e.name) && salary==e.salary;
+    }

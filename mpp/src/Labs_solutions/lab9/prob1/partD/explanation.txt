@@ -1,0 +1,18 @@
+To works logically correct hash map must override equals and hashCode methods correctly
+so here inside method removeDuplicates the statement: tracker.get(e).setVisited(true);
+mutating the equality fields so it containsKey method return false;
+
+so to gives logically correct result we must do as following
+
+
+    @Override
+    public boolean equals(Object o){
+        if(o==null) return false;
+        if(!(o instanceof Employee e)) return false;
+        return name.equals(e.name) && salary==e.salary;
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(name,salary);
+    }
