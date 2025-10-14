@@ -1,0 +1,65 @@
+The Diamond Problem arises in multiple inheritance when a subclass (D) inherits from two classes/interfaces (B and C) that
+both inherit from a common superclass (A) and provide conflicting implementations of the same method (method()).
+
+In Java:
+
+Classes support single inheritance only to avoid the Diamond Problem.
+
+Interfaces can be multiply inherited (since Java 8) but conflicts must be explicitly resolved
+1. When the type D is a class
+abstract class A {
+    abstract void method();
+}
+
+class B extends A {
+    void method() {
+        System.out.println("B");
+    }
+}
+
+class C extends A {
+    void method() {
+        System.out.println("C");
+    }
+}
+
+// class D extends B, C {}   is the Not allowed.
+Java does not allow multiple inheritance of classes, so class D extends B, C is illegal.
+
+2. When the type D is an interface.
+
+Java allows multiple inheritance of interfaces.
+
+If two interfaces provide conflicting default methods (like B and C), the child (D) must override the method to resolve the conflict.
+
+Java requires you to explicitly choose which method to inherit using B.super.method() or C.super.method().
+if one interface provides a default and the other is just abstract?
+there is Still a conflict because abstract in C "overrides" the default in B, forcing D to resolve it.
+
+
+interface A {
+    void method(); // abstract
+}
+
+interface B extends A {
+    default void method() {
+        System.out.println("B");
+    }
+}
+
+interface C extends A {
+    default void method() {
+        System.out.println("C");
+    }
+}
+
+interface D extends B, C {
+    @Override
+    default void method() {
+        // Must resolve the conflict
+        B.super.method();  // or C.super.method() or my own custom logic
+    }
+}
+
+
+
