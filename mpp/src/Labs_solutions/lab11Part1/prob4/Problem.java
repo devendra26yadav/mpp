@@ -26,6 +26,19 @@ public class Problem {
 				.sorted(Comparator.comparing(Customer::getZip))
 				.map(c->c.getZip())
 				.distinct().toList();
+		/*
+		other way to solve
+
+
+		return list.stream()
+				.filter(c->c.getCity().length()>6)
+				.filter(c->!c.getCity().toLowerCase().contains("e"))
+				.map(Customer::getZip)
+				.distinct()
+				.sorted()
+				.collect(Collectors.toList());
+
+		 */
 	}
 	
 	
