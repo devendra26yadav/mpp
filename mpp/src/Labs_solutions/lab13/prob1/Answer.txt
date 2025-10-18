@@ -1,0 +1,19 @@
+Consider the following code fragments. For each, if there is a compiler error, identify
+where it occurs.
+a. First fragment:
+List<Integer> ints = new ArrayList<>();
+ints.add(1);
+ints.add(2);
+List<Number> nums = ints; // compiler error: incompatible types because generics are invariant
+
+nums.add(3.14);
+
+
+b. Second fragment:
+List<Integer> ints = new ArrayList<>();
+ints.add(1);
+ints.add(2);
+List<? extends Number> nums = ints;
+nums.add(3.14); //compiler error: cannot add to List<? extends Number>
+
+because compiler does not guarantee the type it could be Double, Integer, etc
