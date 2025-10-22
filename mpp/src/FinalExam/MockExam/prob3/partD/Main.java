@@ -17,10 +17,15 @@ public class Main {
         List<Owner> ownerList = new ArrayList<>();
         ownerList.add(owner1);
         ownerList.add(owner2);
+        System.out.println(allOwnerTotalApartmentRent(ownerList));
 
 
     }
-//    public static double allOwnerTotalApartmentRent(List<Owner> owners){
-//        return
-//    }
+    public static double allOwnerTotalApartmentRent(List<Owner> owners){
+        return owners.stream()
+                .flatMap(o->o.getBuildings().stream())
+                .flatMap(a->a.getApartments().stream())
+                .mapToDouble(Apartment::getRent)
+                .sum();
+    }
 }

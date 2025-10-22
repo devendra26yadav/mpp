@@ -11,4 +11,5 @@ public class Test1 {
 
         Number n = list.get(0);
     }
+
 }
