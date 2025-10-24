@@ -1,9 +1,0 @@
-Relationships:
-
-Department 1:N Employee
-
-Department N:M Project (via ProjectDepartment, if needed)
-
-Employee N:M Project → EmployeeProject
-
-Project N:M Client → ProjectClient
